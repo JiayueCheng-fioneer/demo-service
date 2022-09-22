@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<kotlin.version>1.6.21</kotlin.version>
+		<kotest.version>5.4.2</kotest.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,6 +52,41 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito.kotlin</groupId>
+			<artifactId>mockito-kotlin</artifactId>
+			<version>4.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-runner-junit5-jvm</artifactId>
+			<version>${kotest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-assertions-core-jvm</artifactId>
+			<version>${kotest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-assertions-json-jvm</artifactId>
+			<version>${kotest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-property-jvm</artifactId>
+			<version>${kotest.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
