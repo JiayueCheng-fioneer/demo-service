@@ -10,7 +10,7 @@ open class Cat (
     @GeneratedValue
     private val id: Long = 0L,
     private var name: String?,
-    private var age: Number?,
+    private var age: Double,
     private val colour: String?,
     private val sex: String?,
     private var mood: String?,
@@ -26,9 +26,13 @@ open class Cat (
         return this.name
     }
 
+    fun getAge(): Double {
+        return this.age
+    }
+
     fun getPets(): String{
         if(this.mood != "happy") {
-            this.mood = "happy"
+            setMood("happy")
         }
         return "You petted the cat! $name is now $mood and purring!"
     }
